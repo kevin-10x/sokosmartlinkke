@@ -1,0 +1,986 @@
+[
+  {
+    "name": "Nairobi",
+    "county": "Nairobi",
+    "status": "Capital",
+    "population": 4397073,
+    "lat": -1.2921,
+    "lng": 36.8219
+  },
+  {
+    "name": "Mombasa",
+    "county": "Mombasa",
+    "status": "City",
+    "population": 1208333,
+    "lat": -4.0435,
+    "lng": 39.6682
+  },
+  {
+    "name": "Ruiru",
+    "county": "Kiambu",
+    "status": "Municipality",
+    "population": 490120,
+    "lat": -1.1483,
+    "lng": 36.9605
+  },
+  {
+    "name": "Nakuru",
+    "county": "Nakuru",
+    "status": "City",
+    "population": 570674,
+    "lat": -0.3031,
+    "lng": 36.08
+  },
+  {
+    "name": "Eldoret",
+    "county": "Uasin Gishu",
+    "status": "City",
+    "population": 475716,
+    "lat": 0.5143,
+    "lng": 35.2698
+  },
+  {
+    "name": "Kisumu",
+    "county": "Kisumu",
+    "status": "City",
+    "population": 397957,
+    "lat": -0.1022,
+    "lng": 34.7617
+  },
+  {
+    "name": "Kikuyu",
+    "county": "Kiambu",
+    "status": "Municipality",
+    "population": 323881,
+    "lat": -1.2544,
+    "lng": 36.6817
+  },
+  {
+    "name": "Ngong",
+    "county": "Kajiado",
+    "status": "Municipality",
+    "population": 279757,
+    "lat": -1.3628,
+    "lng": 36.6569
+  },
+  {
+    "name": "Mavoko",
+    "county": "Machakos",
+    "status": "Municipality",
+    "population": 258498,
+    "lat": -1.45,
+    "lng": 36.9667
+  },
+  {
+    "name": "Thika",
+    "county": "Kiambu",
+    "status": "Municipality",
+    "population": 251407,
+    "lat": -1.0388,
+    "lng": 37.0834
+  },
+  {
+    "name": "Naivasha",
+    "county": "Nakuru",
+    "status": "Municipality",
+    "population": 198444,
+    "lat": -0.7167,
+    "lng": 36.4333
+  },
+  {
+    "name": "Karuri",
+    "county": "Kiambu",
+    "status": "Municipality",
+    "population": 194342,
+    "lat": -0.7,
+    "lng": 37.1833
+  },
+  {
+    "name": "Kitale",
+    "county": "Trans Nzoia",
+    "status": "Municipality",
+    "population": 162560,
+    "lat": 1.0157,
+    "lng": 35.0067
+  },
+  {
+    "name": "Juja",
+    "county": "Kiambu",
+    "status": "Municipality",
+    "population": 156041,
+    "lat": -1.1,
+    "lng": 37.0167
+  },
+  {
+    "name": "Kitengela",
+    "county": "Kajiado",
+    "status": "Municipality",
+    "population": 154643,
+    "lat": -1.4667,
+    "lng": 36.9667
+  },
+  {
+    "name": "Kiambu",
+    "county": "Kiambu",
+    "status": "Municipality",
+    "population": 155896,
+    "lat": -1.1714,
+    "lng": 36.8356
+  },
+  {
+    "name": "Malindi",
+    "county": "Kilifi",
+    "status": "Municipality",
+    "population": 119859,
+    "lat": -3.2176,
+    "lng": 40.1191
+  },
+  {
+    "name": "Mandera",
+    "county": "Mandera",
+    "status": "Municipality",
+    "population": 114718,
+    "lat": 3.9363,
+    "lng": 41.867
+  },
+  {
+    "name": "Kisii",
+    "county": "Kisii",
+    "status": "Municipality",
+    "population": 112417,
+    "lat": -0.6773,
+    "lng": 34.7796
+  },
+  {
+    "name": "Kakamega",
+    "county": "Kakamega",
+    "status": "Municipality",
+    "population": 107227,
+    "lat": 0.2827,
+    "lng": 34.7519
+  },
+  {
+    "name": "Mtwapa",
+    "county": "Kilifi",
+    "status": "Municipality",
+    "population": 90677,
+    "lat": -3.95,
+    "lng": 39.75
+  },
+  {
+    "name": "Wajir",
+    "county": "Wajir",
+    "status": "Municipality",
+    "population": 90116,
+    "lat": 1.7471,
+    "lng": 40.0573
+  },
+  {
+    "name": "Lodwar",
+    "county": "Turkana",
+    "status": "Municipality",
+    "population": 82970,
+    "lat": 3.1199,
+    "lng": 36.0033
+  },
+  {
+    "name": "Limuru",
+    "county": "Kiambu",
+    "status": "Municipality",
+    "population": 81316,
+    "lat": -1.1065,
+    "lng": 36.6436
+  },
+  {
+    "name": "Meru",
+    "county": "Meru",
+    "status": "Municipality",
+    "population": 80191,
+    "lat": 0.0463,
+    "lng": 37.6559
+  },
+  {
+    "name": "Nyeri",
+    "county": "Nyeri",
+    "status": "Municipality",
+    "population": 80081,
+    "lat": -0.4167,
+    "lng": 36.95
+  },
+  {
+    "name": "Isiolo",
+    "county": "Isiolo",
+    "status": "Municipality",
+    "population": 78650,
+    "lat": 0.3539,
+    "lng": 37.5822
+  },
+  {
+    "name": "Ukunda",
+    "county": "Kwale",
+    "status": "Municipality",
+    "population": 77686,
+    "lat": -4.2833,
+    "lng": 39.5667
+  },
+  {
+    "name": "Kiserian",
+    "county": "Kajiado",
+    "status": "Town Council",
+    "population": 76903,
+    "lat": -1.4,
+    "lng": 36.6833
+  },
+  {
+    "name": "Kilifi",
+    "county": "Kilifi",
+    "status": "Municipality",
+    "population": 74270,
+    "lat": -3.6305,
+    "lng": 39.8499
+  },
+  {
+    "name": "Nanyuki",
+    "county": "Laikipia",
+    "status": "Municipality",
+    "population": 72813,
+    "lat": 0.0167,
+    "lng": 37.0667
+  },
+  {
+    "name": "Busia",
+    "county": "Busia",
+    "status": "Municipality",
+    "population": 71886,
+    "lat": 0.4601,
+    "lng": 34.1117
+  },
+  {
+    "name": "Migori",
+    "county": "Migori",
+    "status": "Municipality",
+    "population": 71668,
+    "lat": -1.0634,
+    "lng": 34.4731
+  },
+  {
+    "name": "Bungoma",
+    "county": "Bungoma",
+    "status": "Municipality",
+    "population": 68031,
+    "lat": 0.5635,
+    "lng": 34.5608
+  },
+  {
+    "name": "Narok",
+    "county": "Narok",
+    "status": "Municipality",
+    "population": 65430,
+    "lat": -1.0875,
+    "lng": 35.8771
+  },
+  {
+    "name": "Embu",
+    "county": "Embu",
+    "status": "Municipality",
+    "population": 64979,
+    "lat": -0.5373,
+    "lng": 37.4599
+  },
+  {
+    "name": "Machakos",
+    "county": "Machakos",
+    "status": "Municipality",
+    "population": 63767,
+    "lat": -1.5177,
+    "lng": 37.2634
+  },
+  {
+    "name": "El Wak",
+    "county": "Mandera",
+    "status": "Municipality",
+    "population": 60732,
+    "lat": 2.8,
+    "lng": 40.9333
+  },
+  {
+    "name": "Gilgil",
+    "county": "Nakuru",
+    "status": "Municipality",
+    "population": 60711,
+    "lat": -0.5,
+    "lng": 36.3167
+  },
+  {
+    "name": "Kimilili",
+    "county": "Bungoma",
+    "status": "Municipality",
+    "population": 56050,
+    "lat": 0.7833,
+    "lng": 34.7167
+  },
+  {
+    "name": "Kericho",
+    "county": "Kericho",
+    "status": "Municipality",
+    "population": 53804,
+    "lat": -0.3689,
+    "lng": 35.2863
+  },
+  {
+    "name": "Voi",
+    "county": "Taita-Taveta",
+    "status": "Municipality",
+    "population": 53353,
+    "lat": -3.3962,
+    "lng": 38.5561
+  },
+  {
+    "name": "Wanguru",
+    "county": "Kirinyaga",
+    "status": "Municipality",
+    "population": 51722,
+    "lat": -0.6833,
+    "lng": 37.3667
+  },
+  {
+    "name": "Habaswein",
+    "county": "Wajir",
+    "status": "Town Council",
+    "population": 49599,
+    "lat": 1.0167,
+    "lng": 39.4833
+  },
+  {
+    "name": "Turi",
+    "county": "Nakuru",
+    "status": "Municipality",
+    "population": 48356,
+    "lat": -0.5333,
+    "lng": 36.35
+  },
+  {
+    "name": "Moyale",
+    "county": "Marsabit",
+    "status": "Other Centre",
+    "population": 47850,
+    "lat": 3.5216,
+    "lng": 39.0542
+  },
+  {
+    "name": "Homa Bay",
+    "county": "Homa Bay",
+    "status": "Municipality",
+    "population": 44949,
+    "lat": -0.5273,
+    "lng": 34.4571
+  },
+  {
+    "name": "Kenol",
+    "county": "Murang'a",
+    "status": "Other Centre",
+    "population": 44086,
+    "lat": -0.9333,
+    "lng": 37.1333
+  },
+  {
+    "name": "Masalani",
+    "county": "Garissa",
+    "status": "Town Council",
+    "population": 43642,
+    "lat": -1.6833,
+    "lng": 40.0667
+  },
+  {
+    "name": "Muranga",
+    "county": "Murang'a",
+    "status": "Municipality",
+    "population": 43314,
+    "lat": -0.7833,
+    "lng": 37.1333
+  },
+  {
+    "name": "Webuye",
+    "county": "Bungoma",
+    "status": "Municipality",
+    "population": 42642,
+    "lat": 0.6167,
+    "lng": 34.7667
+  },
+  {
+    "name": "Njoro",
+    "county": "Nakuru",
+    "status": "Town Council",
+    "population": 42173,
+    "lat": -0.3333,
+    "lng": 35.95
+  },
+  {
+    "name": "Kapsabet",
+    "county": "Nandi",
+    "status": "Municipality",
+    "population": 41997,
+    "lat": 0.2039,
+    "lng": 35.105
+  },
+  {
+    "name": "Mumias",
+    "county": "Kakamega",
+    "status": "Municipal",
+    "population": 41942,
+    "lat": 0.3333,
+    "lng": 34.4833
+  },
+  {
+    "name": "Kerugoya-Kutus",
+    "county": "Kirinyaga",
+    "status": "Municipality",
+    "population": 39188,
+    "lat": -0.5,
+    "lng": 37.2833
+  },
+  {
+    "name": "Nyahururu",
+    "county": "Laikipia",
+    "status": "Municipality",
+    "population": 37650,
+    "lat": 0.0381,
+    "lng": 36.3633
+  },
+  {
+    "name": "Marsabit",
+    "county": "Marsabit",
+    "status": "Municipality",
+    "population": 36289,
+    "lat": 2.3287,
+    "lng": 37.989
+  },
+  {
+    "name": "Rhamu",
+    "county": "Mandera",
+    "status": "Town Council",
+    "population": 35644,
+    "lat": 3.9333,
+    "lng": 41.2167
+  },
+  {
+    "name": "Siaya",
+    "county": "Siaya",
+    "status": "Municipality",
+    "population": 33153,
+    "lat": 0.0612,
+    "lng": 34.2882
+  },
+  {
+    "name": "Mariakani",
+    "county": "Kwale",
+    "status": "Municipality",
+    "population": 31715,
+    "lat": -3.8633,
+    "lng": 39.4736
+  },
+  {
+    "name": "Maralal",
+    "county": "Samburu",
+    "status": "Municipality",
+    "population": 31350,
+    "lat": 1.0968,
+    "lng": 36.698
+  },
+  {
+    "name": "Mairo-Inya",
+    "county": "Nyandarua",
+    "status": "Municipality",
+    "population": 30527,
+    "lat": -0.3,
+    "lng": 36.6333
+  },
+  {
+    "name": "Kitui",
+    "county": "Kitui",
+    "status": "Municipality",
+    "population": 29062,
+    "lat": -1.3667,
+    "lng": 38.0167
+  },
+  {
+    "name": "Makutano",
+    "county": "West Pokot",
+    "status": "Town Council",
+    "population": 28469,
+    "lat": 1.3,
+    "lng": 35.2833
+  },
+  {
+    "name": "Elburgon",
+    "county": "Nakuru",
+    "status": "Town Council",
+    "population": 28359,
+    "lat": -0.3,
+    "lng": 35.8167
+  },
+  {
+    "name": "Watamu",
+    "county": "Kilifi",
+    "status": "Town Council",
+    "population": 27857,
+    "lat": -3.3547,
+    "lng": 40.0174
+  },
+  {
+    "name": "Lamu",
+    "county": "Lamu",
+    "status": "Municipality",
+    "population": 25385,
+    "lat": -2.2717,
+    "lng": 40.902
+  },
+  {
+    "name": "Kajiado",
+    "county": "Kajiado",
+    "status": "Municipality",
+    "population": 24678,
+    "lat": -1.8524,
+    "lng": 36.7768
+  },
+  {
+    "name": "Nyamira",
+    "county": "Nyamira",
+    "status": "Municipality",
+    "population": 24483,
+    "lat": -0.5633,
+    "lng": 34.9358
+  },
+  {
+    "name": "Isebania",
+    "county": "Migori",
+    "status": "Town Council",
+    "population": 23891,
+    "lat": -1.25,
+    "lng": 34.4833
+  },
+  {
+    "name": "Karatina",
+    "county": "Nyeri",
+    "status": "Municipality",
+    "population": 23552,
+    "lat": -0.4833,
+    "lng": 37.1333
+  },
+  {
+    "name": "Kakuma",
+    "county": "Turkana",
+    "status": "Town Council",
+    "population": 22984,
+    "lat": 3.7167,
+    "lng": 34.8667
+  },
+  {
+    "name": "Lafey",
+    "county": "Mandera",
+    "status": "Town Council",
+    "population": 22882,
+    "lat": 3.8167,
+    "lng": 41.8333
+  },
+  {
+    "name": "Bondo",
+    "county": "Siaya",
+    "status": "Municipality",
+    "population": 22712,
+    "lat": 0.2333,
+    "lng": 34.2833
+  },
+  {
+    "name": "Kabarnet",
+    "county": "Baringo",
+    "status": "Municipality",
+    "population": 22474,
+    "lat": 0.4924,
+    "lng": 35.743
+  },
+  {
+    "name": "Chuka",
+    "county": "Tharaka-Nithi",
+    "status": "Municipality",
+    "population": 22388,
+    "lat": -0.3333,
+    "lng": 37.65
+  },
+  {
+    "name": "Kehancha",
+    "county": "Migori",
+    "status": "Municipality",
+    "population": 22194,
+    "lat": -1.1833,
+    "lng": 34.6167
+  },
+  {
+    "name": "Maua",
+    "county": "Meru",
+    "status": "Municipality",
+    "population": 22121,
+    "lat": 0.2333,
+    "lng": 37.9333
+  },
+  {
+    "name": "Taveta",
+    "county": "Taita-Taveta",
+    "status": "Town Council",
+    "population": 22018,
+    "lat": -3.4,
+    "lng": 37.6667
+  },
+  {
+    "name": "Takaba",
+    "county": "Mandera",
+    "status": "Town Council",
+    "population": 11471,
+    "lat": 3.3,
+    "lng": 40.1833
+  },
+  {
+    "name": "Eldama Ravine",
+    "county": "Baringo",
+    "status": "Town Council",
+    "population": 21385,
+    "lat": 0.05,
+    "lng": 35.7333
+  },
+  {
+    "name": "Hola",
+    "county": "Tana River",
+    "status": "Municipality",
+    "population": 20912,
+    "lat": -1.5,
+    "lng": 40.0333
+  },
+  {
+    "name": "Mai Mahiu",
+    "county": "Nakuru",
+    "status": "Other Centre",
+    "population": 20823,
+    "lat": -0.8167,
+    "lng": 36.5833
+  },
+  {
+    "name": "Rongo",
+    "county": "Migori",
+    "status": "Municipality",
+    "population": 20688,
+    "lat": -0.75,
+    "lng": 34.75
+  },
+  {
+    "name": "Oyugis",
+    "county": "Homa Bay",
+    "status": "Municipality",
+    "population": 19947,
+    "lat": -0.5,
+    "lng": 34.7333
+  },
+  {
+    "name": "Wote",
+    "county": "Makueni",
+    "status": "Municipality",
+    "population": 19725,
+    "lat": -1.7833,
+    "lng": 37.6333
+  },
+  {
+    "name": "Emali",
+    "county": "Makueni",
+    "status": "Municipality",
+    "population": 62404,
+    "lat": -2.0833,
+    "lng": 37.4667
+  },
+  {
+    "name": "Garbatula",
+    "county": "Isiolo",
+    "status": "Other Centre",
+    "population": 17443,
+    "lat": 0.5333,
+    "lng": 38.5167
+  },
+  {
+    "name": "Mbale",
+    "county": "Vihiga",
+    "status": "Other Centre",
+    "population": 17404,
+    "lat": 0.0833,
+    "lng": 34.7167
+  },
+  {
+    "name": "Mwingi",
+    "county": "Kitui",
+    "status": "Municipality",
+    "population": 17025,
+    "lat": -0.9333,
+    "lng": 38.0667
+  },
+  {
+    "name": "Awendo",
+    "county": "Migori",
+    "status": "Municipality",
+    "population": 16815,
+    "lat": -0.9,
+    "lng": 34.5167
+  },
+  {
+    "name": "Kiminini",
+    "county": "Trans Nzoia",
+    "status": "Town Council",
+    "population": 16560,
+    "lat": 0.9,
+    "lng": 34.9167
+  },
+  {
+    "name": "Moi's Bridge",
+    "county": "Uasin Gishu",
+    "status": "Other Centre",
+    "population": 16355,
+    "lat": 0.8667,
+    "lng": 35.1333
+  },
+  {
+    "name": "Mazeras",
+    "county": "Kwale",
+    "status": "Other Centre",
+    "population": 16254,
+    "lat": -3.9833,
+    "lng": 39.5667
+  },
+  {
+    "name": "Malaba",
+    "county": "Busia",
+    "status": "Municipality",
+    "population": 15581,
+    "lat": 0.6333,
+    "lng": 34.2833
+  },
+  {
+    "name": "Makindu",
+    "county": "Makueni",
+    "status": "Town Council",
+    "population": 15038,
+    "lat": -2.2833,
+    "lng": 37.4167
+  },
+  {
+    "name": "Banissa",
+    "county": "Mandera",
+    "status": "Other Centre",
+    "population": 14974,
+    "lat": 3.9333,
+    "lng": 40.3167
+  },
+  {
+    "name": "Msambweni",
+    "county": "Kwale",
+    "status": "Other Centre",
+    "population": 14951,
+    "lat": -4.4667,
+    "lng": 39.45
+  },
+  {
+    "name": "Namanga",
+    "county": "Kajiado",
+    "status": "Other Centre",
+    "population": 14922,
+    "lat": -2.55,
+    "lng": 36.7833
+  },
+  {
+    "name": "Mbita",
+    "county": "Homa Bay",
+    "status": "Municipality",
+    "population": 14916,
+    "lat": -0.4167,
+    "lng": 34.2
+  },
+  {
+    "name": "Isinya",
+    "county": "Kajiado",
+    "status": "Other Centre",
+    "population": 14429,
+    "lat": -1.6667,
+    "lng": 36.85
+  },
+  {
+    "name": "Athi River",
+    "county": "Machakos",
+    "status": "Town",
+    "population": 80000,
+    "lat": -1.45,
+    "lng": 36.9833
+  },
+  {
+    "name": "Baragoi",
+    "county": "Samburu",
+    "status": "Town",
+    "population": 12000,
+    "lat": 2.7833,
+    "lng": 36.7833
+  },
+  {
+    "name": "Bomet",
+    "county": "Bomet",
+    "status": "Town",
+    "population": 45000,
+    "lat": -0.7833,
+    "lng": 35.35
+  },
+  {
+    "name": "Chogoria",
+    "county": "Tharaka-Nithi",
+    "status": "Town",
+    "population": 35000,
+    "lat": -0.1667,
+    "lng": 37.6167
+  },
+  {
+    "name": "Garissa",
+    "county": "Garissa",
+    "status": "Town",
+    "population": 65000,
+    "lat": -0.453,
+    "lng": 39.6461
+  },
+  {
+    "name": "Iten",
+    "county": "Elgeyo-Marakwet",
+    "status": "Town",
+    "population": 42000,
+    "lat": 0.6703,
+    "lng": 35.5081
+  },
+  {
+    "name": "Kabarnet",
+    "county": "Baringo",
+    "status": "Municipality",
+    "population": 22474,
+    "lat": 0.4924,
+    "lng": 35.743
+  },
+  {
+    "name": "Kangundo-Tala",
+    "county": "Machakos",
+    "status": "Town",
+    "population": 38000,
+    "lat": -1.3,
+    "lng": 37.35
+  },
+  {
+    "name": "Kapenguria",
+    "county": "West Pokot",
+    "status": "Town",
+    "population": 25000,
+    "lat": 1.2333,
+    "lng": 35.1167
+  },
+  {
+    "name": "Kibwezi",
+    "county": "Makueni",
+    "status": "Town",
+    "population": 22000,
+    "lat": -2.4167,
+    "lng": 37.9667
+  },
+  {
+    "name": "Kwale",
+    "county": "Kwale",
+    "status": "Town",
+    "population": 18000,
+    "lat": -4.1833,
+    "lng": 39.45
+  },
+  {
+    "name": "Lokichogio",
+    "county": "Turkana",
+    "status": "Town",
+    "population": 15000,
+    "lat": 4.2,
+    "lng": 34.35
+  },
+  {
+    "name": "Loiyangalani",
+    "county": "Marsabit",
+    "status": "Town",
+    "population": 10000,
+    "lat": 2.7667,
+    "lng": 36.7167
+  },
+  {
+    "name": "Masii",
+    "county": "Machakos",
+    "status": "Town",
+    "population": 20000,
+    "lat": -1.4167,
+    "lng": 37.45
+  },
+  {
+    "name": "Mtito Andei",
+    "county": "Makueni",
+    "status": "Town",
+    "population": 16000,
+    "lat": -2.6833,
+    "lng": 38.1667
+  },
+  {
+    "name": "Mutomo",
+    "county": "Kitui",
+    "status": "Town",
+    "population": 14000,
+    "lat": -1.85,
+    "lng": 38.2167
+  },
+  {
+    "name": "Ol Kalou",
+    "county": "Nyandarua",
+    "status": "Town",
+    "population": 25000,
+    "lat": -0.2708,
+    "lng": 36.3792
+  },
+  {
+    "name": "Ongata Rongai",
+    "county": "Kajiado",
+    "status": "Town",
+    "population": 60000,
+    "lat": -1.4,
+    "lng": 36.7667
+  },
+  {
+    "name": "Shimoni",
+    "county": "Kwale",
+    "status": "Town",
+    "population": 8000,
+    "lat": -4.65,
+    "lng": 39.3833
+  },
+  {
+    "name": "Takaungu",
+    "county": "Kilifi",
+    "status": "Town",
+    "population": 9000,
+    "lat": -3.6833,
+    "lng": 39.85
+  },
+  {
+    "name": "Vihiga",
+    "county": "Vihiga",
+    "status": "Town",
+    "population": 20000,
+    "lat": 0.0833,
+    "lng": 34.7167
+  },
+  {
+    "name": "Wundanyi",
+    "county": "Taita-Taveta",
+    "status": "Town",
+    "population": 12000,
+    "lat": -3.4,
+    "lng": 38.3667
+  }
+]

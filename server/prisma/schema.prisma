@@ -1,0 +1,218 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model City {
+  id         String   @id @default(uuid())
+  name       String   @unique
+  county     String
+  status     String
+  population Int
+  lat        Float
+  lng        Float
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  businesses Business[]
+  matatuStages MatatuStage[]
+
+  @@index([county])
+  @@index([name])
+}
+
+model Category {
+  id          String   @id @default(uuid())
+  name        String   @unique
+  slug        String   @unique
+  icon        String?
+  color       String?
+  sortOrder   Int      @default(0)
+  isActive    Boolean  @default(true)
+  parentId    String?
+  parent      Category? @relation("CategoryParent", fields: [parentId], references: [id])
+  children    Category[] @relation("CategoryParent")
+
+  businesses  Business[]
+
+  @@index([slug])
+}
+
+model Business {
+  id              String   @id @default(uuid())
+  googlePlaceId   String?  @unique
+  name            String
+  slug            String   @unique
+  description     String?
+
+  // Location
+  lat             Float
+  lng             Float
+  address         String
+  county          String
+  subCounty       String?
+  ward            String?
+  landmark        String?
+  cityId          String?
+  city            City?    @relation(fields: [cityId], references: [id])
+
+  // Categorization
+  categoryId      String
+  category        Category @relation(fields: [categoryId], references: [id])
+  keywords        String[] @default([])
+
+  // Contact
+  phonePrimary    String?
+  phoneSecondary  String?
+  email           String?
+  website         String?
+  whatsapp        String?
+
+  // Metadata
+  isVerified      Boolean  @default(false)
+  isClaimed       Boolean  @default(false)
+  claimedById     String?
+  claimedBy       User?    @relation("ClaimedBusinesses", fields: [claimedById], references: [id])
+  source          String   @default("user_submitted") // google_places, user_submitted, admin
+  status          String   @default("pending") // active, inactive, pending_review, rejected
+
+  // Ratings
+  rating          Float    @default(0)
+  reviewCount     Int      @default(0)
+
+  // Media
+  photos          Json?    @default("[]")
+  coverPhoto      String?
+
+  // Hours
+  businessHours   Json?    @default("{}")
+  isOpenNow       Boolean  @default(false)
+
+  // Timestamps
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  lastSyncedAt    DateTime?
+
+  // Relations
+  reviews         Review[]
+  submissions     UserSubmission[]
+
+  @@index([cityId])
+  @@index([categoryId])
+  @@index([status])
+  @@index([county])
+  @@index([lat, lng])
+}
+
+model MatatuStage {
+  id            String   @id @default(uuid())
+  name          String
+  commonNames   String[] @default([])
+  lat           Float
+  lng           Float
+  address       String?
+  county        String
+  cityId        String?
+  city          City?    @relation(fields: [cityId], references: [id])
+
+  // Details
+  stageType     String   @default("stage") // terminal, stage, stop
+  facilities    Json?    @default("{}")
+  safetyRating  Float?
+  crowdLevel    String?  // low, medium, high
+  operatingHours String?
+
+  // Metadata
+  isActive      Boolean  @default(true)
+  verifiedById  String?
+  verifiedBy    User?    @relation("VerifiedStages", fields: [verifiedById], references: [id])
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  // Relations
+  routes        MatatuRoute[]
+  submissions   UserSubmission[]
+
+  @@index([cityId])
+  @@index([county])
+  @@index([lat, lng])
+}
+
+model MatatuRoute {
+  id                String   @id @default(uuid())
+  routeNumber       String
+  saccoName         String?
+  originStageId     String
+  originStage       MatatuStage @relation(fields: [originStageId], references: [id])
+  destination       String
+  via               String[] @default([])
+  estimatedFare     Float?
+  estimatedDuration Int?     // minutes
+  operatingHours    String?
+  frequency         String?  // every_5_min, every_15_min, etc.
+  isActive          Boolean  @default(true)
+  createdAt         DateTime @default(now())
+
+  @@index([originStageId])
+}
+
+model User {
+  id            String   @id @default(uuid())
+  firebaseUid   String?  @unique
+  phoneNumber   String   @unique
+  email         String?
+  displayName   String?
+  avatarUrl     String?
+  role          String   @default("user") // user, business_owner, moderator, admin
+  preferences   Json?    @default("{}")
+  lastLat       Float?
+  lastLng       Float?
+  createdAt     DateTime @default(now())
+
+  // Relations
+  claimedBusinesses Business[] @relation("ClaimedBusinesses")
+  verifiedStages    MatatuStage[] @relation("VerifiedStages")
+  reviews           Review[]
+  submissions       UserSubmission[]
+}
+
+model Review {
+  id          String   @id @default(uuid())
+  businessId  String
+  business    Business @relation(fields: [businessId], references: [id], onDelete: Cascade)
+  userId      String?
+  user        User?    @relation(fields: [userId], references: [id], onDelete: SetNull)
+  rating      Int
+  text        String?
+  photos      Json?    @default("[]")
+  helpfulCount Int     @default(0)
+  createdAt   DateTime @default(now())
+
+  @@index([businessId])
+  @@index([userId])
+}
+
+model UserSubmission {
+  id            String   @id @default(uuid())
+  submissionType String  // new_business, correction, photo, review, matatu_stage
+  status        String   @default("pending") // pending, approved, rejected
+  submittedById String
+  submittedBy   User     @relation(fields: [submittedById], references: [id])
+  businessId    String?
+  business      Business? @relation(fields: [businessId], references: [id])
+  matatuStageId String?
+  matatuStage   MatatuStage? @relation(fields: [matatuStageId], references: [id])
+  data          Json
+  adminNotes    String?
+  reviewedById  String?
+  reviewedAt    DateTime?
+  createdAt     DateTime @default(now())
+
+  @@index([status])
+  @@index([submittedById])
+  @@index([submissionType])
+}

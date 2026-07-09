@@ -1,0 +1,12 @@
+node_modules
+.env
+.env.local
+.env.*.local
+.git
+.next
+coverage
+tests
+Dockerfile
+Dockerfile.prod
+README.md
+*.md

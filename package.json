@@ -1,0 +1,39 @@
+{
+  "name": "smartsoko",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Smart Soko — Hyperlocal marketplace for Kenya",
+  "scripts": {
+    "install:all": "cd server && npm install && cd ../web && npm install && cd ../admin && npm install",
+    "dev:server": "cd server && npm run dev",
+    "dev:web": "cd web && npm run dev",
+    "dev:admin": "cd admin && npm run dev",
+    "build:server": "cd server && npm run build",
+    "build:web": "cd web && npm run build",
+    "build:admin": "cd admin && npm run build",
+    "test:server": "cd server && npm test",
+    "db:migrate": "cd server && npx prisma migrate dev",
+    "db:seed": "cd server && npm run db:seed",
+    "db:studio": "cd server && npx prisma studio",
+    "db:reset": "cd server && npx prisma migrate reset --force",
+    "deploy:server": "cd server && vercel --prod",
+    "deploy:web": "cd web && vercel --prod",
+    "deploy:admin": "cd admin && vercel --prod",
+    "deploy": "bash deploy.sh vercel",
+    "deploy:docker": "bash deploy.sh docker",
+    "docker:build": "docker compose build",
+    "docker:up": "docker compose up -d",
+    "docker:down": "docker compose down",
+    "docker:logs": "docker compose logs -f",
+    "docker:prod:build": "docker compose -f docker-compose.prod.yml build",
+    "docker:prod:up": "docker compose -f docker-compose.prod.yml up -d",
+    "docker:prod:down": "docker compose -f docker-compose.prod.yml down",
+    "docker:prod:migrate": "docker compose -f docker-compose.prod.yml exec server npx prisma migrate deploy",
+    "docker:prod:seed": "docker compose -f docker-compose.prod.yml exec server node prisma/seed.js"
+  },
+  "workspaces": [
+    "server",
+    "web",
+    "admin"
+  ]
+}
