@@ -1,6 +1,8 @@
-FROM node:20-alpine
+FROM node:20-bookworm-slim
 
-RUN apk add --no-cache libc6-compat
+RUN apt-get update && apt-get install -y --no-install-recommends \
+  openssl \
+  && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
 
