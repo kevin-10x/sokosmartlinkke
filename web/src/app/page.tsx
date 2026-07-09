@@ -46,6 +46,9 @@ const categories = [
 ];
 
 export default function Home() {
+  const GOOGLE_MAPS_KEY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
+  const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
+
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('all');
   const [results, setResults] = useState<Business[]>([]);
@@ -53,10 +56,40 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
   const [selectedItem, setSelectedItem] = useState<Business | null>(null);
   const [showDetail, setShowDetail] = useState(false);
-  const [userLocation, setUserLocation] = useState({ lat: -1.2921, lng: 36.8219 }); // Nairobi default
+  const [userLocation, setUserLocation] = useState({ lat: -0.0236, lng: 37.9062 }); // Center of Kenya
+  const [locationName, setLocationName] = useState('Kenya');
   const [totalResults, setTotalResults] = useState(0);
   const [viewMode, setViewMode] = useState<'all' | 'matatu'>('all');
   const [showMap, setShowMap] = useState(false);
+  const [backendAvailable, setBackendAvailable] = useState(true);
+
+  useEffect(() => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (pos) => {
+          const loc = { lat: pos.coords.latitude, lng: pos.coords.longitude };
+          setUserLocation(loc);
+          reverseGeocode(loc);
+        },
+        () => {}
+      );
+    }
+  }, []);
+
+  async function reverseGeocode(loc: { lat: number; lng: number }) {
+    if (!GOOGLE_MAPS_KEY) return;
+    try {
+      const res = await fetch(
+        `https://maps.googleapis.com/maps/api/geocode/json?latlng=${loc.lat},${loc.lng}&key=${GOOGLE_MAPS_KEY}&components=country:ke`
+      );
+      const data = await res.json();
+      if (data.status === 'OK' && data.results[0]) {
+        const parts = data.results[0].address_components;
+        const town = parts.find((p: any) => p.types.includes('locality') || p.types.includes('administrative_area_level_2'));
+        if (town) setLocationName(town.long_name);
+      }
+    } catch {}
+  }
 
   const fetchResults = useCallback(async () => {
     setLoading(true);
@@ -74,14 +107,17 @@ export default function Home() {
         setStages(stageData.results || []);
         setResults([]);
         setTotalResults(stageData.results?.length || 0);
+        setBackendAvailable(true);
       } else {
         const data = await api.search(params.toString());
         setResults(data.results || []);
         setTotalResults(data.total || 0);
         setStages([]);
+        setBackendAvailable(true);
       }
     } catch (err) {
       console.error('Search error:', err);
+      setBackendAvailable(false);
     } finally {
       setLoading(false);
     }
@@ -95,9 +131,11 @@ export default function Home() {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         (pos) => {
-          setUserLocation({ lat: pos.coords.latitude, lng: pos.coords.longitude });
+          const loc = { lat: pos.coords.latitude, lng: pos.coords.longitude };
+          setUserLocation(loc);
+          reverseGeocode(loc);
         },
-        () => alert('Could not get your location. Using default (Nairobi).')
+        () => alert('Could not get your location.')
       );
     }
   };
@@ -153,7 +191,7 @@ export default function Home() {
 
       {/* Location Bar */}
       <div className="px-4 py-2 bg-surface/50 flex items-center justify-between text-xs text-muted">
-        <span>📍 Near <strong className="text-primary">Nairobi CBD</strong> — {totalResults} found</span>
+        <span>📍 <strong className="text-primary">{locationName}</strong> — {totalResults} found</span>
         <div className="flex items-center gap-2">
           <button onClick={() => setShowMap(!showMap)} className={`flex items-center gap-1 px-2 py-1 rounded transition-colors ${showMap ? 'bg-primary text-white' : 'hover:text-primary'}`}>
             {showMap ? <List className="w-3 h-3" /> : <Map className="w-3 h-3" />}
@@ -195,8 +233,17 @@ export default function Home() {
         {!loading && results.length === 0 && stages.length === 0 && (
           <div className="text-center py-12 text-muted">
             <Search className="w-12 h-12 mx-auto mb-3 opacity-30" />
-            <p className="font-medium">No results found</p>
-            <p className="text-xs mt-1">Try a different search or category</p>
+            {backendAvailable ? (
+              <>
+                <p className="font-medium">No results found</p>
+                <p className="text-xs mt-1">Try a different search or category</p>
+              </>
+            ) : (
+              <>
+                <p className="font-medium">Backend server not connected</p>
+                <p className="text-xs mt-1">Set up the API server to see business listings</p>
+              </>
+            )}
           </div>
         )}
 

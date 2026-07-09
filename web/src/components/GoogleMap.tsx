@@ -43,7 +43,7 @@ function loadGoogleMapsAPI(): Promise<GoogleMapLib> {
   return mapsApiPromise;
 }
 
-export default function GoogleMap({ center, markers = [], zoom = 13, className = '', onMarkerClick }: GoogleMapProps) {
+export default function GoogleMap({ center, markers = [], zoom = 7, className = '', onMarkerClick }: GoogleMapProps) {
   const mapRef = useRef<HTMLDivElement>(null);
   const [map, setMap] = useState<google.maps.Map | null>(null);
   const markersRef = useRef<google.maps.Marker[]>([]);
