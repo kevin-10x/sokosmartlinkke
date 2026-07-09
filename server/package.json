@@ -13,8 +13,7 @@
     "db:studio": "prisma studio",
     "test": "jest --coverage",
     "test:watch": "jest --watch",
-    "lint": "eslint src/",
-    "postinstall": "prisma generate"
+    "lint": "eslint src/"
   },
   "dependencies": {
     "@prisma/client": "^5.16.0",
