@@ -47,6 +47,11 @@ app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan('combined', { stream: { write: msg => logger.info(msg.trim()) } }));
 
+// Root route
+app.get('/', (req, res) => {
+  res.json({ name: 'Smart Soko API', version: '1.0.0', status: 'running', docs: '/health' });
+});
+
 // Health check
 app.get('/health', (req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString(), version: '1.0.0' });
